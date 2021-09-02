@@ -1,0 +1,1 @@
+export { default as DogsLogo } from './dogs.svg';

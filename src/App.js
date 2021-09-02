@@ -9,11 +9,12 @@ function App() {
   return (
     <div>
       <GlobalStyle />
+      
       <BrowserRouter>
         <Header />
           <Switch>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
+            <Route exact path="/login" element={<Login />} />
           </Switch>
         <Footer />
       </BrowserRouter>
