@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, css } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
+    padding-top: 4rem;
 
     color: #333;
 
@@ -37,10 +38,18 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
     font-family: var(--type-first);
   }
+
+  a {
+    text-decoration: none;
+  }
+`
+
+export const ContainerModel = css`
+    max-width: 1200px;
+    padding: 0 1rem;
+    margin: 0 auto;
 `
 
 export const GlobalContainer = styled.div`
-  max-width: 1200px;
-  padding: 0 1rem;
-  margin: 0 auto;
+  ${ContainerModel}
 `

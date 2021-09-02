@@ -13,8 +13,12 @@ function App() {
       <BrowserRouter>
         <Header />
           <Switch>
-            <Route path="/" element={<Home />} />
-            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
           </Switch>
         <Footer />
       </BrowserRouter>

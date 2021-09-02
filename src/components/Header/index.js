@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
-import { GlobalContainer } from "../../shared/styles/GlobalStyles";
 import { DogsLogo } from "../../shared/assets";
+import { Container, Login, Logo, Navigation } from "./styles";
 
 export default function Header() {
   return (
-    <GlobalContainer>
-      <nav>
-        <Link to="/">
-          <img src={DogsLogo} alt="logo" />
-        </Link>
-        <Link to="/login">Login</Link>
-      </nav>
-    </GlobalContainer>
+    <Container>
+        <Navigation>
+          <Link to="/">
+            <Logo src={DogsLogo} alt="logo" />
+          </Link>
+          <Link to="/login">
+            <Login>Login</Login>
+          </Link>
+        </Navigation>
+    </Container>
   )
 }
