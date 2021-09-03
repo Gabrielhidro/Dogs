@@ -1,10 +1,10 @@
-import { Container } from "./styles";
+import { Container, InputStyle, LabelStyle } from "./styles";
 
 export default function Input (props) {
   return (
     <Container>
-      <label htmlFor={props.name}>{props.label}</label>
-      <input type={props.type} id={props.name} />
+      <LabelStyle htmlFor={props.name}>{props.label}</LabelStyle>
+      <InputStyle type={props.type} id={props.name} />
     </Container>
   );
 }
