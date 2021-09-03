@@ -1,6 +1,8 @@
 import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
+import Button from "../../../Form/Button";
+import Input from "../../../Form/Input";
 
 export default function LoginForm() {
   const [username, setUsername] = React.useState("dog");
@@ -36,20 +38,14 @@ export default function LoginForm() {
       <h1>Login</h1>
 
       <form onSubmit={handleSubmitLogin}>
-        <input
-          type="text"
-          value={username}
-          onChange={({ target }) => setUsername(target.value)}
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={({ target }) => setPassword(target.value)}
-        />
-        <button type="submit">Enviar</button>
+        <Input label="Usuário" type="text" name="username" />
+        <Input label="Senha" type="password" name="password" />
+
+        <Button type="submit">Entrar</Button>
       </form>
 
       <Link to="/login/create">Cadastro</Link>
+
     </div>
   );
 }
