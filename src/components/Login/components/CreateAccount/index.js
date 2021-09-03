@@ -1,7 +1,9 @@
 export default function CreateAccount () {
   return (
     <div>
-      Create
+      Create Account
+      Create Account
+      Create Account
     </div>
   );
 }
