@@ -1,4 +1,4 @@
-import { Link, Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import CreateAccount from "./components/CreateAccount/index.js";
 import ForgotPassword from "./components/ForgotPassword/index.js";
 import LoginForm from "./components/LoginForm.js";
@@ -7,26 +7,17 @@ import ResetPassword from "./components/ResetPassword/index.js";
 export default function Login() {
   return (
     <div>
-      <Switch>
+      <Routes>
 
-        <Route path="/">
-          <LoginForm />
-        </Route>
+        <Route path="/" element={<LoginForm />} />
 
-        <Route path="create">
-          <CreateAccount />
-        </Route>
+        <Route path="/create" element={ <CreateAccount />} />
 
-        <Route path="forgot">
-          <ForgotPassword />
-        </Route>
+        <Route path="forgot" element={<ForgotPassword />} />
 
-        <Route path="reset">
-          <ResetPassword />
-        </Route>
+        <Route path="reset" element={<ResetPassword />} />
 
-      </Switch>
-      <Link to="login/create">Cadastro</Link>
+      </Routes>
     </div>
   );
 }

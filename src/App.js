@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -12,17 +12,10 @@ function App() {
       
       <BrowserRouter>
         <Header />
-          <Switch>
-
-            <Route exact path="/">
-              <Home />
-            </Route>
-
-            <Route path="/login">
-              <Login />
-            </Route>
-
-          </Switch>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login/*" element={<Login />} />
+          </Routes>
         <Footer />
       </BrowserRouter>
     </div>

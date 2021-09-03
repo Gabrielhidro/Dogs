@@ -1,7 +1,7 @@
 export default function ResetPassword () {
   return (
     <div>
-      ResetPassword
+      <h1>ResetPassword</h1>
     </div>
   );
 }

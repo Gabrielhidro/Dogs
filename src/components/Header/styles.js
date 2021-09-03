@@ -24,7 +24,7 @@ export const Logo = styled.img`
   padding: 0.5rem 0;
 `
 
-export const Login = styled.a`
+export const Login = styled.p`
   color: #333;
 
   &::after {
