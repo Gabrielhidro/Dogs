@@ -1,7 +1,7 @@
-import axios from "axios";
+// import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
-import { TOKEN_POST } from "../../../../api";
+import { UserContext } from "../../../../context";
 import useForm from "../../../../shared/hooks/useForm";
 import Button from "../../../Form/Button";
 import Input from "../../../Form/Input";
@@ -10,33 +10,16 @@ export default function LoginForm() {
   const username = useForm("");
   const password = useForm("");
 
+  const {userLogin} = React.useContext(UserContext)
+
   async function handleSubmitLogin(event) {
     event.preventDefault();
 
     if (username.validate() && password.validate()) {
-      const { url, options } = TOKEN_POST({
-        username: username.value,
-        password: password.value,
-      });
-
-      fetch(url, options)
-        .then((response) => {
-          return response.json();
-        })
-        .then((json) => {
-          console.log(json);
-        });
+      userLogin(username.value, password.value)
     }
-
-    // const response = await axios.post('https://dogsapi.origamid.dev/json/jwt-auth/v1/token', {
-    //   password: password,
-    //   username: username
-    // })
-    // const data = response.data
-    // console.log(data);
-    // return response
   }
-
+  
   return (
     <div>
       <h1>Login</h1>
@@ -52,3 +35,11 @@ export default function LoginForm() {
     </div>
   );
 }
+
+// const response = await axios.post('https://dogsapi.origamid.dev/json/jwt-auth/v1/token', {
+//   password: password,
+//   username: username
+// })
+// const data = response.data
+// console.log(data);
+// return response

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { UserImg } from "../../shared/assets";
-import { ContainerModel, GlobalContainer } from "../../shared/styles/GlobalStyles";
+import { ContainerModel } from "../../shared/styles/GlobalStyles";
 
 export const Container = styled.header`
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);

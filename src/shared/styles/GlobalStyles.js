@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle, css } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -48,8 +48,4 @@ export const ContainerModel = css`
     max-width: 1200px;
     padding: 0 1rem;
     margin: 0 auto;
-`
-
-export const GlobalContainer = styled.div`
-  ${ContainerModel}
 `
