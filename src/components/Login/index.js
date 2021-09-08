@@ -5,6 +5,7 @@ import CreateAccount from "./components/CreateAccount/index.js";
 import ForgotPassword from "./components/ForgotPassword/index.js";
 import LoginForm from "./components/LoginForm.js";
 import ResetPassword from "./components/ResetPassword/index.js";
+import { Container, Forms } from "./styles.js";
 
 export default function Login() {
 
@@ -13,18 +14,20 @@ export default function Login() {
   if (login === true) return <Navigate to ='/conta' />
 
   return (
-    <div>
-      <Routes>
+    <Container>
+      <Forms>
+        <Routes>
 
-        <Route path="/" element={<LoginForm />} />
+          <Route path="/" element={<LoginForm />} />
 
-        <Route path="/create" element={ <CreateAccount />} />
+          <Route path="/create" element={ <CreateAccount />} />
 
-        <Route path="forgot" element={<ForgotPassword />} />
+          <Route path="forgot" element={<ForgotPassword />} />
 
-        <Route path="reset" element={<ResetPassword />} />
+          <Route path="reset" element={<ResetPassword />} />
 
-      </Routes>
-    </div>
+        </Routes>
+      </Forms>  
+    </Container>
   );
 }

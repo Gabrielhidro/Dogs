@@ -1,11 +1,11 @@
 // import axios from "axios";
 import React from "react";
-import { Link } from "react-router-dom";
 import { UserContext } from "../../../../context";
 import useForm from "../../../../shared/hooks/useForm";
 import Button from "../../../Form/Button";
 import Input from "../../../Form/Input";
-import { Container, Title } from "./styles";
+import { Container, Title, Form, LinkForgot, LinkRegister, RegisterContainer } from "./styles";
+import Error from '../../../../shared/helper/Error'
 
 export default function LoginForm() {
   const username = useForm("");
@@ -25,14 +25,20 @@ export default function LoginForm() {
     <Container>
       <Title>Login</Title>
 
-      <form onSubmit={handleSubmitLogin}>
+      <Form onSubmit={handleSubmitLogin}>
         <Input label="Usuário" type="text" name="username" {...username} />
         <Input label="Senha" type="password" name="password" {...password} />
         {loading ? <Button disabled type="submit">Carregando...</Button> : <Button type="submit">Entrar</Button>}
-        {error && <p>{error}</p>}
-      </form>
+        <Error error={error} />
+      </Form>
+      
+      <LinkForgot to='/login/forgot'>Perdeu a senha?</LinkForgot>
 
-      <Link to="/login/create">Cadastro</Link>
+      <RegisterContainer>
+        <h2>Cadastre-se</h2>
+        <p>Ainda nãopossui conta ? Cadastre-se no site.</p>
+        <LinkRegister to="/login/create">Cadastro</LinkRegister>
+      </RegisterContainer>
     </Container>
   );
 }

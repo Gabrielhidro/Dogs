@@ -1,4 +1,5 @@
 import { Container, InputStyle, LabelStyle } from "./styles";
+import { Erro } from "../../../shared/helper/Error/styles";
 
 export default function Input({
   name,
@@ -14,7 +15,7 @@ export default function Input({
       <LabelStyle htmlFor={name}>{label}</LabelStyle>
       <InputStyle type={type} id={name} onChange={onChange} value={value} onBlur={onBlur} />
 
-      {error && <p>{error}</p>}
+      {error && <Erro>{error}</Erro>}
     </Container>
   );
 }
