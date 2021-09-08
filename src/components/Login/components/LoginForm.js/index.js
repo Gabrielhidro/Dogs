@@ -5,6 +5,7 @@ import { UserContext } from "../../../../context";
 import useForm from "../../../../shared/hooks/useForm";
 import Button from "../../../Form/Button";
 import Input from "../../../Form/Input";
+import { Container, Title } from "./styles";
 
 export default function LoginForm() {
   const username = useForm("");
@@ -21,8 +22,8 @@ export default function LoginForm() {
   }
   
   return (
-    <div>
-      <h1>Login</h1>
+    <Container>
+      <Title>Login</Title>
 
       <form onSubmit={handleSubmitLogin}>
         <Input label="Usuário" type="text" name="username" {...username} />
@@ -32,7 +33,7 @@ export default function LoginForm() {
       </form>
 
       <Link to="/login/create">Cadastro</Link>
-    </div>
+    </Container>
   );
 }
 
