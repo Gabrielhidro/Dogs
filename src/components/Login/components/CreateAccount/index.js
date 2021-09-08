@@ -5,6 +5,8 @@ import useForm from "../../../../shared/hooks/useForm";
 import Button from "../../../Form/Button";
 import Input from "../../../Form/Input";
 import { Container, Title } from "./styles";
+import useFetch from "../../../../shared/hooks/useFetch";
+import Error from '../../../../shared/helper/Error'
 
 export default function CreateAccount () {
   const username = useForm()
@@ -12,6 +14,7 @@ export default function CreateAccount () {
   const password = useForm('password')
 
   const {userLogin} = React.useContext(UserContext)
+  const {loading, error, request } = useFetch();
 
   async function handleSubmit(event){
     event.preventDefault()
@@ -20,8 +23,7 @@ export default function CreateAccount () {
       email: email.value,
       password: password.value,
     })
-    const response = await fetch(url, options)
-
+    const {response} = await request(url, options)
     if (response.ok){
       return userLogin(username.value, password.value)
     }     
@@ -36,7 +38,8 @@ export default function CreateAccount () {
         <Input label="Email" type="email" name="email" {...email} />
         <Input label="Senha" type="password" name="password" {...password} />
 
-        <Button>Cadastrar</Button>
+        {loading ? <Button disabled>Carregando...</Button> : <Button>Cadastrar</Button>}
+        <Error error={error} />
       </form>
     </Container>
   );
