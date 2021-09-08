@@ -50,7 +50,7 @@ export const ContainerModel = css`
     margin: 0 auto;
 `
 
-export const titleModel = css`
+export const TitleModel = css`
   font-family: var(--type-second);
   line-height: 1;
   font-size: 3rem;

@@ -20,7 +20,7 @@ export default function Login() {
 
           <Route path="/" element={<LoginForm />} />
 
-          <Route path="/create" element={ <CreateAccount />} />
+          <Route path="create" element={ <CreateAccount />} />
 
           <Route path="forgot" element={<ForgotPassword />} />
 

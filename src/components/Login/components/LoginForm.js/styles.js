@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { AnimateModel, titleModel } from "../../../../shared/styles/GlobalStyles";
+import { AnimateModel, TitleModel } from "../../../../shared/styles/GlobalStyles";
 import { Link as DefaultLink } from 'react-router-dom';
 
 export const Container = styled.section`
@@ -7,7 +7,7 @@ export const Container = styled.section`
 `
 
 export const Title = styled.h1`
-  ${titleModel}
+  ${TitleModel}
 `
 
 export const Form = styled.form`
