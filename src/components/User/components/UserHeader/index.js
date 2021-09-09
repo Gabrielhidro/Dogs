@@ -1,7 +1,11 @@
+import UserHeaderNav from "../UserHeaderNav";
+import { Container, Title } from "./styles";
+
 export default function UserHeader (){
   return (
-    <div>
-      header user
-    </div>
+    <Container>
+      <Title>Useheader</Title>
+      <UserHeaderNav />
+    </Container>
   )
 }

@@ -6,7 +6,7 @@ import { Container, Login, Logo, Navigation } from "./styles";
 
 export default function Header() {
 
-  const {data, userLogout} = React.useContext(UserContext)
+  const {data} = React.useContext(UserContext)
 
   return (
     <Container>
@@ -24,7 +24,6 @@ export default function Header() {
               </Link>
             )
           }
-          <button onClick={userLogout}>sair</button>
         </Navigation>
     </Container>
   )
