@@ -18,12 +18,17 @@ export const Container = styled.nav`
     transition: 0.2s;
     cursor: pointer;
 
-    &:hover,
-    &:focus {
+    &:hover {
       background: white;
       box-shadow: 0 0 0 3px #eee;
       border-color: #333;
       outline: none;
     }
+  }
+  
+  .active {
+    background: white;
+    box-shadow: 0 0 0 3px #fea;
+    border-color: #fb1;
   }
 `
