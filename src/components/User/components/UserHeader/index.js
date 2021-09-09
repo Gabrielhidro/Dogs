@@ -10,18 +10,17 @@ export default function UserHeader (){
 
   React.useEffect(() => {
     if(location.pathname === '/conta'){
-      setTitle('Feed')
+      setTitle('Minha Conta')
     }
     if(location.pathname === '/conta/statistics'){
       setTitle('Estatísticas')
     }
     if(location.pathname === '/conta/posts'){
-      setTitle('Adicionar post')
+      setTitle('Adicionar Post')
     }
     
   }, [location])
   
-  console.log(location);
   return (
     <Container>
       <Title>{title}</Title>
