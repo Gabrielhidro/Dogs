@@ -1,5 +1,12 @@
+import FeedModal from "./components/FeedModal";
+import FeedPhoto from "./components/FeedPhotos";
+import { Container } from "./styles";
+
 export default function Feed(){
   return (
-    <h1>Feed</h1>
+    <Container>
+      <FeedModal />
+      <FeedPhoto />
+    </Container>
   )
 }

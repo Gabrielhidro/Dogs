@@ -1,8 +1,10 @@
+import Feed from "../User/components/Feed";
+import { Container } from "./styles";
 
 export default function Home(){
     return (
-        <div>
-            Home
-        </div>
+        <Container>
+            <Feed />
+        </Container>
     )
 } 

@@ -6,3 +6,5 @@ export { default as AdicionarImg } from './adicionar.svg';
 export { default as FeedImg } from './feed.svg';
 export { default as EstatisticasImg } from './estatisticas.svg';
 export { default as SairImg } from './sair.svg';
+
+export { default as VisualImg } from './visualizacao.svg';
