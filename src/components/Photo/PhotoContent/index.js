@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import PhotoComments from "../PhotoComments";
-import { Author, Container, Details, ImageContainer, Views } from "./styles";
+import { Attributes, Author, Container, Details, ImageContainer, Views } from "./styles";
 
 export default function PhotoContent({data}){
 
@@ -19,10 +19,10 @@ export default function PhotoContent({data}){
           <h1>
             <Link to={`/photo/${photo.id}`}>{photo.title}</Link>
           </h1>
-          <ul>
+          <Attributes>
             <li>{photo.peso} Kg</li>
             <li>{photo.idade} {photo.idade === 1 ? 'Ano' : 'Anos'}</li>
-          </ul>
+          </Attributes>
       </Details>
       <PhotoComments id={photo.id} comments={comments} />
     </Container>

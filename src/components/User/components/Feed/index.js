@@ -9,7 +9,7 @@ export default function Feed(){
 
   return (
     <Container>
-      {modalPhoto && <FeedModal photo={modalPhoto} />}
+      {modalPhoto && <FeedModal photo={modalPhoto} setModalPhoto={setModalPhoto} />}
       <FeedPhoto setModalPhoto={setModalPhoto} />
     </Container>
   )

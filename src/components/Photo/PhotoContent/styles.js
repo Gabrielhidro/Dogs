@@ -76,3 +76,27 @@ export const Views = styled.span`
     background: url(${VisualBlackImg});
   }
 `
+
+export const Attributes = styled.ul`
+  display: flex;
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  li {
+    margin-right: 2rem;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      height: 20px;
+      margin-right: .5rem;
+      position: relative;
+      top: 3px;
+      width: 2px;
+      background: black;
+      margin-top: 5px;
+    }
+  }
+`

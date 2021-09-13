@@ -6,7 +6,7 @@ import useFetch from "../../../../../../shared/hooks/useFetch"
 import PhotoContent from "../../../../../Photo/PhotoContent"
 import { ModalContainer } from "./styles"
 
-export default function FeedModal({photo}){
+export default function FeedModal({photo, setModalPhoto}){
 
   const {data, error, loading, request} = useFetch()
 
@@ -15,8 +15,12 @@ export default function FeedModal({photo}){
     request(url, options)
   }, [photo, request])
 
+  function handleOutsideClick (event){
+    if (event.target === event.currentTarget) setModalPhoto(null)
+  }
+
   return (
-    <ModalContainer>
+    <ModalContainer onClick={handleOutsideClick}>
       {error && <Error error={error} />}
       {loading && <Loading />}
       {data && <PhotoContent data={data} />}
