@@ -9,3 +9,4 @@ export { default as SairImg } from './sair.svg';
 
 export { default as VisualImg } from './visualizacao.svg';
 export { default as VisualBlackImg } from './visualizacao-black.svg';
+export { default as SubmitCommentsImg } from './enviar.svg';
