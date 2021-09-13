@@ -3,6 +3,7 @@ import { COMMENT_POST } from "../../../api"
 import { SubmitCommentsImg } from "../../../shared/assets"
 import Error from "../../../shared/helper/Error"
 import useFetch from "../../../shared/hooks/useFetch"
+import { Button, Container, TextArea } from "./styles"
 
 
 export default function PhotoCommentsForm ({id, setComments}){
@@ -21,8 +22,8 @@ export default function PhotoCommentsForm ({id, setComments}){
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <textarea 
+    <Container onSubmit={handleSubmit}>
+      <TextArea 
         id="comment"
         name="comment"
         placeholder="Comentar..."
@@ -30,10 +31,11 @@ export default function PhotoCommentsForm ({id, setComments}){
         onChange={({target}) => setComment(target.value)}
       />
 
-      <button>
+      <Button>
         <img src={SubmitCommentsImg} alt='' />
-        <Error error={error} />
-      </button>
-    </form>
+      </Button>
+      
+      <Error error={error} />
+    </Container>
   )
 }

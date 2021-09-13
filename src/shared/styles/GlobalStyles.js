@@ -5,6 +5,11 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  :root {
+    --type-first: Helvetica, Arial, sans-serif;
+    --type-second: 'Spectral', Georgia;
+  }
+
   body {
     margin: 0;
     padding: 0;
@@ -12,10 +17,7 @@ export const GlobalStyle = createGlobalStyle`
 
     color: #333;
 
-    --type-first: Helvetica, Arial, sans-serif;
-    --type-second: 'Spectral', Georgia;
-
-    font-family: var(---type-first);
+    font-family: var(--type-first);
   }
 
   h1, h2, h3, h4, p {
