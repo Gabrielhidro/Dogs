@@ -6,7 +6,7 @@ import Error from "../../../../../../shared/helper/Error";
 import Loading from "../../../../../../shared/helper/Loading";
 import { Container } from "./styles";
 
-export default function FeedPhoto(){
+export default function FeedPhoto({setModalPhoto}){
 
   const {data, loading, error, request} = useFetch();
 
@@ -26,7 +26,7 @@ export default function FeedPhoto(){
     <Container>
       {data.map(photo => {
         return (
-          <FeedPhotosItem photo={photo} key={photo.id} />
+          <FeedPhotosItem setModalPhoto={setModalPhoto} photo={photo} key={photo.id} />
         )
       })}
     </Container>
