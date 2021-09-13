@@ -4,6 +4,7 @@ import Error from "../../../../../../shared/helper/Error"
 import Loading from "../../../../../../shared/helper/Loading"
 import useFetch from "../../../../../../shared/hooks/useFetch"
 import PhotoContent from "../../../../../Photo/PhotoContent"
+import { ModalContainer } from "./styles"
 
 export default function FeedModal({photo}){
 
@@ -15,10 +16,10 @@ export default function FeedModal({photo}){
   }, [photo, request])
 
   return (
-    <div>
+    <ModalContainer>
       {error && <Error error={error} />}
       {loading && <Loading />}
       {data && <PhotoContent data={data} />}
-    </div>
+    </ModalContainer>
   )
 }

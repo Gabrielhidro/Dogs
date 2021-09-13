@@ -56,6 +56,7 @@ export const TitleModel = css`
   font-size: 3rem;
   margin: 1rem 0;
   position: relative;
+  z-index: 2;
 
   &::after{
     content: '';
