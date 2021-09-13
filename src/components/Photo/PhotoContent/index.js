@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../../context";
+import ImageLoading from "../../../shared/helper/ImageLoading";
 import PhotoComments from "../PhotoComments";
 import PhotoDelete from "../PhotoDelete";
 import {
@@ -19,7 +20,7 @@ export default function PhotoContent({ data }) {
   return (
     <Container>
       <ImageContainer>
-        <img src={photo.src} alt={photo.title} />
+        <ImageLoading src={photo.src} alt={photo.title} />
       </ImageContainer>
       <Details>
         <Author>

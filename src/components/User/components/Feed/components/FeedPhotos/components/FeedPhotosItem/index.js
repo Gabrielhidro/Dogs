@@ -1,3 +1,4 @@
+import ImageLoading from "../../../../../../../../shared/helper/ImageLoading";
 import { Container } from "./styles";
 
 export default function FeedPhotosItem({photo, setModalPhoto}){
@@ -8,7 +9,7 @@ export default function FeedPhotosItem({photo, setModalPhoto}){
 
   return (
     <Container onClick={handleClick}>
-      <img src={photo.src} alt={photo.title} />
+      <ImageLoading src={photo.src} alt={photo.title} />
       <span>{photo.acessos}</span>
     </Container>
   )
