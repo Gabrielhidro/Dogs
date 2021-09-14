@@ -118,3 +118,16 @@ export function PHOTO_GET_PROF(id) {
     },
   };
 }
+
+export function FORGOT_PASSWORD(body) {
+  return {
+    url: API_URL + '/api/password/lost',
+    options: {
+      method: 'POST',
+      Headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body)
+    },
+  };
+}

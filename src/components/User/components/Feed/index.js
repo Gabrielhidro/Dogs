@@ -56,5 +56,8 @@ export default function Feed({ user }) {
 }
 
 Feed.propTypes = {
-  user: PropTypes.string.isRequired
+  user: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.number.isRequired,
+  ])
 }
