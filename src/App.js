@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import PhotoProfile from "./components/Photo/PhotoProfile";
 import User from "./components/User";
+import UserProfile from "./components/User/components/UserProfile";
 import { UserStorage } from "./context";
 import ProtectedRouter from "./shared/helper/ProtectedRouter";
 import { GlobalStyle } from "./shared/styles/GlobalStyles";
@@ -22,6 +23,7 @@ function App() {
               <Route path="login/*" element={<Login />} />
               <ProtectedRouter path="conta/*" element={<User />} />
               <Route path="photo/:id" element={<PhotoProfile />} />
+              <Route path="profile/:user" element={<UserProfile />} />
             </Routes>
           <Footer />
         </UserStorage>
