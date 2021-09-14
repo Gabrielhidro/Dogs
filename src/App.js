@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Login from "./components/Login";
+import PageNotFound from "./components/PageNotFound";
 import PhotoProfile from "./components/Photo/PhotoProfile";
 import User from "./components/User";
 import UserProfile from "./components/User/components/UserProfile";
@@ -24,6 +25,7 @@ function App() {
               <ProtectedRouter path="conta/*" element={<User />} />
               <Route path="photo/:id" element={<PhotoProfile />} />
               <Route path="profile/:user" element={<UserProfile />} />
+              <Route path="*" element={<PageNotFound />} />
             </Routes>
           <Footer />
         </UserStorage>

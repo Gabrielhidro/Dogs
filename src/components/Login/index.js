@@ -1,6 +1,7 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { UserContext } from "../../context/index.js";
+import PageNotFound from "../PageNotFound/index.js";
 import CreateAccount from "./components/CreateAccount/index.js";
 import ForgotPassword from "./components/ForgotPassword/index.js";
 import LoginForm from "./components/LoginForm.js";
@@ -25,6 +26,8 @@ export default function Login() {
           <Route path="forgot" element={<ForgotPassword />} />
 
           <Route path="reset" element={<ResetPassword />} />
+
+          <Route path="*" element={<PageNotFound />} />
 
         </Routes>
       </Forms>  
