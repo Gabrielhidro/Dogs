@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Login from "./components/Login";
+import PhotoProfile from "./components/Photo/PhotoProfile";
 import User from "./components/User";
 import { UserStorage } from "./context";
 import ProtectedRouter from "./shared/helper/ProtectedRouter";
@@ -20,6 +21,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="login/*" element={<Login />} />
               <ProtectedRouter path="conta/*" element={<User />} />
+              <Route path="photo/:id" element={<PhotoProfile />} />
             </Routes>
           <Footer />
         </UserStorage>

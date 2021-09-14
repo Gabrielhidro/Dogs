@@ -108,3 +108,13 @@ export function PHOTO_DELETE(id){
     },
   }
 }
+
+export function PHOTO_GET_PROF(id) {
+  return {
+    url: `${API_URL}/api/photo/${id}`,
+    options: {
+      method: 'GET',
+      cache: 'no-store',
+    },
+  };
+}
