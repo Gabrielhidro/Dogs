@@ -10,10 +10,11 @@ import UserProfile from "./components/User/components/UserProfile";
 import { UserStorage } from "./context";
 import ProtectedRouter from "./shared/helper/ProtectedRouter";
 import { GlobalStyle } from "./shared/styles/GlobalStyles";
+import './shared/styles/App.css'
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <GlobalStyle />
       
       <BrowserRouter>

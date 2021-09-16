@@ -10,3 +10,5 @@ export { default as SairImg } from './sair.svg';
 export { default as VisualImg } from './visualizacao.svg';
 export { default as VisualBlackImg } from './visualizacao-black.svg';
 export { default as SubmitCommentsImg } from './enviar.svg';
+
+export { default as DogsFooterImg } from './dogs-footer.svg';
