@@ -4,8 +4,9 @@ import { ContainerModel, TitleModel } from "../../../../shared/styles/GlobalStyl
 export const Container = styled.header`
   ${ContainerModel}
 
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   align-items: center;
   mask-border: 2rem;
   position: relative;

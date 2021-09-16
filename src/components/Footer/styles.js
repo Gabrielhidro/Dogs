@@ -6,7 +6,8 @@ export const Container = styled.footer`
   height: 10rem;
   text-align: center;
   color: #764701;
-
+  margin-top: 500px;
+  display: none;
   p {
     margin-top: 1rem;
   }
